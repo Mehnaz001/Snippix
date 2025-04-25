@@ -1,15 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Home from './components/Home'
+import Snippets from './components/Snippets'
+import Navbar from './components/Navbar'
+import ViewSnippets from './components/ViewSnippets'
 
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element : <div>
+        <Home />
+        <Navbar />
+      </div>
+    },
+    {
+      path: "/snippets",
+      element : <div>
+        <Navbar />
+        <Snippets />
+      </div>
+    },
+    {
+      path: "/snippets/:id",
+      element : <div>
+        <Navbar />
+        <ViewSnippets />
+      </div>
+    },
+  ]
+)
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
    <div>
-    <h1 className="text-sky-700">Hello jee</h1>
+    <RouterProvider router = {router}/>
    </div>
   )
 }
