@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import toast from 'react-hot-toast';
 const initialState = {
   snippets:localStorage.getItem("snippets")?
   JSON.parse(localStorage.getItem("snippets")) : [] 
@@ -10,7 +10,10 @@ export const SnippixSlice = createSlice({
   initialState,
   reducers: {
     addToSnippets: (state, action) => {
-     
+     const snippet = action.payload;
+     state.snippets.push(snippet);
+     localStorage.setItem("snippets",JSON.stringify(state.snippets));
+     toast("Snippet saved Succesfully");
     },
     updateToSnippets: (state, action) => {
       
