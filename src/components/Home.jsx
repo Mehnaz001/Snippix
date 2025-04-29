@@ -1,14 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom';
 import { addToSnippets, updateToSnippets } from '../redux/SnippixSlice';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
   const [title,setTitle] = useState('');
   const [value,setValue] = useState('');
   const [searchParams,setSearchParams] = useSearchParams();
-  const snippetId = searchParams.get("SnippetId");
+  const snippetId = searchParams.get("snippetId");
   const dispatch = useDispatch();
+  const snippets = useSelector((state) => state.snippix.snippets);
+  
+  useEffect(() => {
+    console.log("inside useEffect")
+      const snippet = snippets.find((p) => p._id === snippetId);
+      if (snippet) {
+        setTitle(snippet.title);
+        console.log(snippet.title)
+        setValue(snippet.value);
+      }
+    }, [snippetId, snippets]);
+
   function createSnippet() {
     const snippet = {
       title:title,
@@ -25,13 +38,14 @@ const Home = () => {
     }
 
     setTitle('');
-    setValue(''),
+    setValue('');
     setSearchParams({});
   }
+
   return (
     <div>
       <input 
-      className = 'rounded-1xl p-2 mt-2 bg-gray-700'
+      className = 'rounded-1xl p-2 mt-2 bg-gray-500 text-white'
       type="text"
       placeholder='Enter Title Here'
       value={title}
@@ -41,7 +55,7 @@ const Home = () => {
         {snippetId? "Update Snippet" : "Create My Snippet"}
       </button>
       <div >
-        <textarea className='bg-gray-600 mt-4 h-100 w-100' placeholder='Enter your content here' value={value} onChange={(e)=>setValue(e.target.value)}></textarea>
+        <textarea className='bg-gray-400 mt-4 h-100 w-100 text-white' placeholder='Enter your content here' value={value} onChange={(e)=>setValue(e.target.value)}></textarea>
       </div>
     </div>
   )
