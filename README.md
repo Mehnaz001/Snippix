@@ -1,17 +1,86 @@
-<<<<<<< HEAD
-# React + Vite
+# Snippix 💻✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Snippix is a modern snippet manager app that allows you to create, view, update, and organize your code snippets in a simple and efficient way. It helps you store your code snippets in one place and access them anytime, anywhere.
 
-Currently, two official plugins are available:
+## Features 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Create Snippets**: Add new code snippets with a title and value (content).
+- **Edit Snippets**: Update your existing snippets with ease.
+- **Delete Snippets**: Remove any snippets you no longer need.
+- **Search Snippets**: Quickly find your snippets with the built-in search functionality.
+- **View Snippets**: View full details of any snippet you've stored.
+- **Dark Mode** 🌙: Enjoy a clean and comfortable experience with dark mode support.
 
-## Expanding the ESLint configuration
+## Tech Stack ⚙️
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Snippix
-Code/Notes Saver React App
->>>>>>> 8ca25fd01787d5f23c8afb89610d1b9ecb5bc8f1
+- **Frontend**: React, Tailwind CSS, React Router
+- **State Management**: Redux for managing application state
+- **Icons**: Lucide icons
+
+## Installation 🛠️
+
+To get started with Snippix, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/snippix.git
+   ```
+
+2. **Navigate to the project directory**:
+   ```bash
+   cd snippix
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**:
+   ```bash
+   npm start
+   ```
+   This will launch the app in your browser at `http://localhost:3000`.
+
+## Usage 📖
+
+Once the app is running, you can:
+
+1. **Create Snippets**: Go to the Home page and create new snippets by entering a title and content.
+2. **View Snippets**: View your snippets in the Snippets page. You can also search for specific snippets using the search bar.
+3. **Edit Snippets**: Edit the title and content of an existing snippet by selecting it from the Snippets page.
+4. **Delete Snippets**: Remove snippets you no longer need with the delete button.
+5. **Toggle Dark Mode**: Click the moon 🌙 icon in the navbar to toggle between light and dark modes.
+
+## Screenshots 📸
+
+### Home Page
+![Home Page](assets/home-page.png)
+
+### Snippet View
+![Snippet View](assets/snippet-view.png)
+
+## Contributing 🤝
+
+We welcome contributions! If you'd like to contribute to Snippix, please fork the repository, create a new branch, and submit a pull request. Here’s how you can contribute:
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to your branch (`git push origin feature-branch`).
+6. Submit a pull request.
+
+## License 📝
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements 🙏
+
+- Thanks to [Lucide Icons](https://lucide.dev/) for providing amazing icons.
+- A special thanks to [Tailwind CSS](https://tailwindcss.com/) for making styling a breeze.
+- Thank you to the open-source community for their incredible tools and libraries.
+
+Feel free to reach out if you have any questions or suggestions!
+
+Happy coding! 😄
