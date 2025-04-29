@@ -55,13 +55,13 @@ Once the app is running, you can:
 ## Screenshots 📸
 
 ### Home Page
-![Home Page](assets/Home.png)
+![Home Page](src/assets/Home.png)
 
 ### All Snippet View
-![Snippets View](assets/SnippetsPage.png)
+![Snippets View](src/assets/SnippetsPage.png)
 
 ### Snippet View
-![Snippet View](assets/ViewSnippets.png)
+![Snippet View](src/assets/ViewSnippets.png)
 
 ## Contributing 🤝
 
