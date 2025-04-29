@@ -3,7 +3,7 @@ import Home from './components/Home'
 import Snippets from './components/Snippets'
 import Navbar from './components/Navbar'
 import ViewSnippets from './components/ViewSnippets'
-
+import "./App.css"
 const router = createBrowserRouter(
   [
     {
@@ -21,7 +21,7 @@ const router = createBrowserRouter(
       </div>
     },
     {
-      path: "/snippets/:id",
+      path: "/snippets/:snippetId",
       element : <div>
         <Navbar />
         <ViewSnippets />
